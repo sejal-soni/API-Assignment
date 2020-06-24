@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 API</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <img src="./COVID-19.bf2a287a.png" alt="covid-19" width="350px" height="100px">
+    <div class="container">
+        <h1 class="text-center mt-5" id="heading">Covid-19 World Data</h1>
+        <br>
+         <table class="table table-hover">
+             <thead>
+                 <tr>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                     <tr id="data">
+                        
+                     </tr>
+                 </tbody>
+         </table>
+         <button onclick="refreshData()" class="btn btn-light btn-block" >
+             Refresh for updated data
+         </button>
+    </div>
+    <div class="container" style="text-align: center;"> 
+        <h1 class="text-center mt-5" id="heading-1">Countries Data</h1>
+        <form id="myForm" >
+            <input type="text" id="country" placeholder="Country Name" required>
+            <input type="submit" value="Search">
+        </form></br>
+        <h2 id="confirmed"></h2>
+        <h2 id="recovered"></h2>
+        <h2 id="deaths"></h2>
+    
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="api.js"></script>
+    
+</body>
+</html>
