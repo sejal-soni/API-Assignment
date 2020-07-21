@@ -28,7 +28,7 @@ myForm.addEventListener('submit',function(e){
     e.preventDefault()
     var country = document.getElementById('country').value
     
-    var url = "https://api.covid19api.com//total/dayone/country/"+country;
+    var url = "https://api.covid19api.com/total/dayone/country/"+country;
     fetch(url)
     .then((res) => res.json())
     .then((res) => {
